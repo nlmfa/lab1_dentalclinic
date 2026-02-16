@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Кристина Кнауб">
+    <meta name="description" content="Макет главной страницы сайта стоматологической клиники">
+    <title>Макет стоматологии - по эскизу</title>
+    <style>
+        /* Базовые стили */
+        body {
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        /* Страница занимает всю ширину */
+        .page {
+            width: 100%;
+            background-color: transparent;
+        }
+        /* Каждый крупный блок имеет рамку и отступы */
+        .block {
+            border: 2px solid #333;
+            margin: 10px 0; /* вертикальные отступы между блоками */
+            padding: 15px;
+            background-color: #fff;
+        }
+        /* Разные цвета для наглядности */
+        header.block { background-color: #e1f5fe; border-color: #0277bd; }
+        nav.block { background-color: #fff9c4; border-color: #f57f17; }
+        main.block { background-color: #f1f8e9; border-color: #6a1b9a; }
+        section.block { background-color: #f3e5f5; border-color: #6a1b9a; margin: 15px 0; }
+        footer.block { background-color: #ffccbc; border-color: #bf360c; }
+
+        /* Внутреннее оформление */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .contacts {
+            font-size: 0.9em;
+            color: #555;
+        }
+        /* Меню на всю ширину с равномерным распределением пунктов */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            width: 100%;
+        }
+        nav ul li {
+            flex: 1; /* каждый пункт занимает равную ширину */
+            text-align: center;
+        }
+        nav ul li a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 5px 0;
+        }
+        /* Стили для наглядности разделов в теле */
+        .body-grid {
+            display: flex;
+            flex-direction: column;
+        }
+        /* Тело на всю ширину */
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- ШАПКА: ЛОГО | ТЕЛЕФОН/АДРЕС/ЧАСЫ -->
+        <header class="block">
+            <div class="header-container">
+                <div class="logo">ЛОГОТИП</div>
+                <div class="contacts">ТЕЛЕФОН | АДРЕС | ЧАСЫ РАБОТЫ</div>
+            </div>
+        </header>
+
+        <!-- МЕНЮ: ГЛАВНАЯ | О КЛИНИКЕ | УСЛУГИ | ЦЕНЫ | СПЕЦИАЛИСТЫ | СИСТЕМА ЛОЯЛЬНОСТИ -->
+        <nav class="block">
+            <ul>
+                <li><a href="#">ГЛАВНАЯ</a></li>
+                <li><a href="#">О КЛИНИКЕ</a></li>
+                <li><a href="#">УСЛУГИ</a></li>
+                <li><a href="#">ЦЕНЫ</a></li>
+                <li><a href="#">СПЕЦИАЛИСТЫ</a></li>
+                <li><a href="#">СИСТЕМА ЛОЯЛЬНОСТИ</a></li>
+            </ul>
+        </nav>
+
+        <!-- ТЕЛО (основное содержимое) -->
+        <main class="block body-grid">
+            <!-- Краткая информация о клинике -->
+            <section class="block">
+                <h2>КРАТКАЯ ИНФОРМАЦИЯ О КЛИНИКЕ</h2>
+                <p style="color: #777;">[Содержимое блока: текст о клинике]</p>
+            </section>
+
+            <!-- Преимущества и показатели -->
+            <section class="block">
+                <h2>ПРЕИМУЩЕСТВА И ПОКАЗАТЕЛИ</h2>
+                <p style="color: #777;">[Содержимое блока: список преимуществ, цифры]</p>
+            </section>
+
+            <!-- Основные услуги (кратко) -->
+            <section class="block">
+                <h2>ОСНОВНЫЕ УСЛУГИ (кратко)</h2>
+                <p style="color: #777;">[Содержимое блока: основные услуги и ссылки на полные описания услуг]</p>
+            </section>
+
+            <!-- Акции и новости -->
+            <section class="block">
+                <h2>АКЦИИ И НОВОСТИ</h2>
+                <p style="color: #777;">[Содержимое блока: актуальные предложения и новости]</p>
+            </section>
+        </main>
+
+        <!-- ПОДВАЛ (Футер) -->
+        <footer class="block">
+            <div style="margin-bottom: 10px;">
+                <span style="margin-right: 20px;">Политика конфиденциальности</span>
+                <span>Нажимая любую кнопку на сайте, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</span>
+            </div>
+            <p style="margin-top: 10px; color: #777;">© 2026 Стоматологическая клиника. Все права защищены.</p>
+            <!-- Комментарий в HTML -->
+            <!-- Подвал содержит политику конфиденциальности, согласие на обработку ПДн и копирайт -->
+        </footer>
+    </div>
+</body>
+</html>
